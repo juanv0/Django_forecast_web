@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Forecast List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Categoria</th>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Ganancia</th>
+          <th>Nombre</th>
+          <th>Ventas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let each_forecast of forecast | async">
+          <td>{{each_forecast.categoria}}</td>
+          <td>{{each_forecast.producto}}</td>
+          <td>{{each_forecast.cantidad}}</td>
+          <td>{{each_forecast.ganancia}}</td>
+          <td>{{each_forecast.nombre}}</td>
+          <td>{{each_forecast.ventas}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
